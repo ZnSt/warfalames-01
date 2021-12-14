@@ -335,3 +335,85 @@ ul {
   width: 648px;
   margin: 60px 92px;
 }
+
+*,
+*::before,
+::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 1230px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 1px solid tomato;
+}
+.garanties {
+  background-color: #000000;
+  color: white;
+  padding: 85px 0;
+  min-height: 725px;
+  background-image: url(../image/union.png);
+  background-repeat: no-repeat;
+  background-position: top 85px right calc(100% / 2 - 580px);
+}
+
+.garanties-container {
+  position: relative;
+  padding-left: 615px;
+  padding-right: 215px;
+}
+.garanties-container::before {
+  position: absolute;
+  top: 0;
+  left: -95px;
+  content: "";
+  width: 590px;
+  height: 565px;
+  display: block;
+  background-image: url(../image/headphones.jpg);
+}
+.garanties-container::after {
+  position: absolute;
+  bottom: 0;
+  right: -135px;
+  content: "";
+  width: 300px;
+  height: 110px;
+  display: block;
+  background-image: url(../image/union.png);
+  background-repeat: no-repeat;
+}
+
+.garanties-item {
+  position: relative;
+  padding-top: 37px;
+  margin-bottom: 40px;
+  outline: 1px solid blue;
+}
+.garanties-item:last-child {
+  margin-bottom: 0;
+}
+.garanties-item::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  display: block;
+  width: 13px;
+  height: 13px;
+  background-color: brown;
+  border-radius: 50%;
+}
